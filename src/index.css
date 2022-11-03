@@ -1,13 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&family=Noto+Sans+TC:wght@400;700&display=swap');
+
+-
+
+@font-face {
+  font-family: "Monument Extended";
+  src: url(./assets/fonts/MonumentExtended-Regular.otf);
+  font-weight: 400;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  html {
+    font-family: "Noto Sans TC", system-ui, sans-serif;
+  }
+}
+
+.gradient-card-bk {
+  linear-gradient(180deg, #9DA4FF 0%, #6E77E9 100%);
+}
+
+.gradient-decoration {
+  linear-gradient(90deg, #9DA4FF 0%, #55FFAD 100%);
+}]
+
+.gradient-card-stroke {
+  linear-gradient(100.38deg, #313A65 3.95%, rgba(49, 58, 101, 0) 100%);
 }
