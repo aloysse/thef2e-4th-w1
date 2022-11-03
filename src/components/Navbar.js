@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 import logoPng from "../assets/img/logo/the_f2e_1.png";
-import { ReactComponent as menuIcon } from "../assets/img/icon/menu.svg";
 import menu from "../assets/img/icon/menu.svg";
 import close from "../assets/img/icon/close.svg";
+import { gsap } from "gsap";
 
 const MenuCotent = ({ content }) => (
-  <li className="py-[16px] ease-linear duration-75 mr-[32px] hover:drop-shadow-green hover:text-N1">
+  <li className="py-[16px] ease-out duration-75 mr-[32px] hover:drop-shadow-green hover:text-N1">
     {content}
   </li>
 );
 
 const NavMobile = ({ navOpend, handleOpenNav }) => (
   <div
-    className={
-      !navOpend
-        ? "hidden"
-        : "md:hidden absolute top-[72px] w-full text-center p-[16px] bg-N5"
-    }
+    id="mobileNav"
+    className={`${
+      navOpend ? "top-[72px]" : "top-[-310px]"
+    } md:hidden absolute w-full text-center p-[16px] bg-N5 ease-out duration-150`}
   >
     <div
       className="flex justify-end p-[22px] cursor-pointer"
@@ -29,7 +28,7 @@ const NavMobile = ({ navOpend, handleOpenNav }) => (
       <MenuCotent content="攻略資源" />
       <MenuCotent content="求職專區" />
       <div className="py-[16px] w-full">
-        <button className="w-full border py-[10px] border-N1 text-N1 rounded-full hover:border-G1 hover:text-G1 hover:drop-shadow-green ease-linear duration-75">
+        <button className="w-full border py-[10px] border-N1 text-N1 rounded-full hover:border-G1 hover:text-G1 hover:drop-shadow-green ease-in-out duration-75">
           登入
         </button>
       </div>
@@ -39,10 +38,12 @@ const NavMobile = ({ navOpend, handleOpenNav }) => (
 
 const Navbar = () => {
   const [navOpend, setNavOpend] = useState(false);
-  const handleOpenNav = () => setNavOpend(!navOpend);
+  const handleOpenNav = () => {
+    setNavOpend(!navOpend);
+  };
   return (
-    <>
-      <div className=" fixed md:absolute px-[32px] h-[72px] md:h-[90px] w-full flex items-center ">
+    <header className="relative">
+      <div className="bg-N5 z-40 fixed md:absolute px-[32px] h-[72px] md:h-[90px] w-full flex items-center ">
         <div
           className="md:hidden mr-[25px] cursor-pointer"
           onClick={handleOpenNav}
@@ -58,16 +59,16 @@ const Navbar = () => {
             <MenuCotent content="攻略資源" />
             <MenuCotent content="求職專區" />
           </ul>
-          <button className="border py-[10px] px-[24px] border-N1 text-N1 rounded-full hover:border-G1 hover:text-G1 hover:drop-shadow-green ease-linear duration-75">
+          <button className="border py-[10px] px-[24px] border-N1 text-N1 rounded-full hover:border-G1 hover:text-G1 hover:drop-shadow-green ease-out duration-75">
             登入
           </button>
         </div>
-        <button className="md:hidden border py-[10px] px-[24px] border-N1 text-N1 rounded-full hover:border-G1 hover:text-G1 hover:drop-shadow-green ease-linear duration-75">
+        <button className="md:hidden border py-[10px] px-[24px] border-N1 text-N1 rounded-full hover:border-G1 hover:text-G1 hover:drop-shadow-green ease-out duration-75">
           立即報名
         </button>
       </div>
       <NavMobile navOpend={navOpend} handleOpenNav={handleOpenNav} />
-    </>
+    </header>
   );
 };
 
