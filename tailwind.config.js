@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      color: {
+      colors: {
         N1: "#FFFFFF",
         N2: "#858993",
         N3: "#151F3F",
@@ -18,10 +18,10 @@ module.exports = {
         Y2: "#FFF385",
       },
       dropShadow: {
-        white: "0px 0px 10px rgba(255, 255, 255, 0.6);",
-        green: "0px 0px 10px rgba(85, 255, 173, 0.6);",
-        purple: "0px 0px 10px rgba(157, 164, 255, 0.6);",
-        yellow: "0px 0px 10px rgba(255, 243, 133, 0.6);",
+        white: "0px 0px 10px rgba(255, 255, 255, 0.6)",
+        green: "0px 0px 10px rgba(85, 255, 173, 0.6)",
+        purple: "0px 0px 10px rgba(157, 164, 255, 0.6)",
+        yellow: "0px 0px 10px rgba(255, 243, 133, 0.6)",
       },
       fontSize: {
         h1: ["48px", "72px"],
