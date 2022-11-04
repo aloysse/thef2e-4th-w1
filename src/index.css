@@ -9,6 +9,12 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Pilot Command Italic";
+  src: url(./assets/fonts/pilotcommand1_2ital.ttf);
+  font-weight: 400;
+}
+
 @layer base {
   html {
     font-family: "Noto Sans TC", system-ui, sans-serif;
@@ -60,4 +66,38 @@ ul.effect-left li:after {
 
 ul.effect-left li:hover:after {
   @apply opacity-100;
+}
+
+.forth-h1 {
+  @apply relative whitespace-nowrap;
+}
+.forth-h1::before {
+  content: "4TH";
+  color: #55ffad;
+  z-index: -1;
+  @apply absolute left-[-5px] top-[-3px] whitespace-nowrap;
+}
+
+.forth-h1::after {
+  content: "4TH";
+  color: #9fa6ff;
+  z-index: -2;
+  @apply absolute left-[5px] top-[2px] whitespace-nowrap;
+}
+
+.f2e-h1 {
+  @apply relative whitespace-nowrap;
+}
+.f2e-h1::before {
+  content: "THE F2E";
+  color: #55ffad;
+  z-index: -1;
+  @apply absolute left-[-5px] top-[-3px] whitespace-nowrap;
+}
+
+.f2e-h1::after {
+  content: "THE F2E";
+  color: #9fa6ff;
+  z-index: -2;
+  @apply absolute left-[5px] top-[2px] whitespace-nowrap;
 }
