@@ -15,7 +15,7 @@ const NavMobile = ({ navOpend, handleOpenNav }) => (
     id="mobileNav"
     className={`${
       navOpend ? "top-[72px]" : "top-[-310px]"
-    } md:hidden absolute w-full text-center p-[16px] bg-N5 ease-out duration-150`}
+    } md:hidden absolute w-full text-center p-[16px] bg-N5 ease-out duration-150 z-30`}
   >
     <div
       className="flex justify-end p-[22px] cursor-pointer"
@@ -42,8 +42,8 @@ const Navbar = () => {
     setNavOpend(!navOpend);
   };
   return (
-    <header className="relative">
-      <div className="bg-N5 z-40 fixed md:absolute px-[32px] h-[72px] md:h-[90px] w-full flex items-center ">
+    <header className="top-0 md:relative fixed w-full z-50">
+      <div className="bg-N5 absolute z-40 px-[32px] h-[72px] md:h-[90px] w-full flex items-center ">
         <div
           className="md:hidden mr-[25px] cursor-pointer"
           onClick={handleOpenNav}
