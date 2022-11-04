@@ -6,8 +6,8 @@ import pacman2 from "../assets/img/pacman-2.svg";
 
 const Hero = () => {
   return (
-    <section className="pt-[172px] pb-[208px] relative w-full">
-      <div className="w-[83%] border m-auto relative max-w-[1244px]">
+    <section className="pt-[172px] md:mb-[208px] mb-[60px] relative w-full">
+      <div className="w-[83%] m-auto relative max-w-[1244px]">
         <div className="text-N1 flex flex-col items-center">
           <div className="md:absolute self-start left-0 top-[28%] -rotate-12 ">
             <img src={codeImg} alt="code" className="md:w-[100%] w-[70%]" />
