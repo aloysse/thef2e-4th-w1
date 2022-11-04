@@ -45,6 +45,7 @@ module.exports = {
         Monument: ["Monument Extended", "sans-serif"],
         Montserrat: ["Montserrat", "sans-serif"],
         notoTC: ["Noto Sans TC", "sans-serif"],
+        Pilot: ["Pilot Command Italic", "Monument Extended", "sans-serif"],
       },
     },
   },
