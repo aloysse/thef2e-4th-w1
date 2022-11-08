@@ -6,11 +6,17 @@ import pacman2 from "../assets/img/pacman-2.svg";
 import { gsap } from "gsap";
 
 const Hero = () => {
+  gsap.from("#codeImg", 1, { y: 50, opacity: 0 });
   return (
     <section className="pt-[172px] md:mb-[208px] mb-[60px] relative w-full">
       <div className="w-[83%] m-auto relative max-w-[1244px] flex flex-col items-center">
         <div className="md:absolute self-start left-0 top-[28%] -rotate-12 ">
-          <img src={codeImg} alt="code" className="lg:w-[100%] w-[60%]" />
+          <img
+            id="codeImg"
+            src={codeImg}
+            alt="code"
+            className="lg:w-[100%] w-[60%]"
+          />
         </div>
         <div className="text-N1 flex flex-col items-center z-30">
           <div className="font-Monument lg:mb-[35px] mb-[17px] flex flex-col md:items-end items-center">
