@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/thef2e-4th-w1/static/css/main.be9e7e63.css",
+    "main.js": "/thef2e-4th-w1/static/js/main.531cb62b.js",
+    "static/media/web_page.png": "/thef2e-4th-w1/static/media/web_page.8fcf40d0dd48d8a1d2d4.png",
+    "static/media/MonumentExtended-Regular.otf": "/thef2e-4th-w1/static/media/MonumentExtended-Regular.db74f7a563ec017311bc.otf",
+    "static/media/pilotcommand1_2ital.ttf": "/thef2e-4th-w1/static/media/pilotcommand1_2ital.788d7d7c80b6ae06ccbb.ttf",
+    "static/media/code.png": "/thef2e-4th-w1/static/media/code.4d7b7e0279378c42a555.png",
+    "static/media/join_us.svg": "/thef2e-4th-w1/static/media/join_us.36bdfdf482ac28be16c54f38621d85d0.svg",
+    "static/media/pacman-1.svg": "/thef2e-4th-w1/static/media/pacman-1.956529a77c7bd3a8e12ea5486c6e5c2b.svg",
+    "static/media/pacman-2.svg": "/thef2e-4th-w1/static/media/pacman-2.c2270246d66451a50612f5577d25e536.svg",
+    "index.html": "/thef2e-4th-w1/index.html",
+    "static/media/menu.svg": "/thef2e-4th-w1/static/media/menu.a46cadd2bb3c6c253e02c6c204e8a25a.svg",
+    "static/media/close.svg": "/thef2e-4th-w1/static/media/close.b62aac77803d09a9e9a75d98478f5980.svg",
+    "main.be9e7e63.css.map": "/thef2e-4th-w1/static/css/main.be9e7e63.css.map",
+    "main.531cb62b.js.map": "/thef2e-4th-w1/static/js/main.531cb62b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be9e7e63.css",
+    "static/js/main.531cb62b.js"
+  ]
+}
