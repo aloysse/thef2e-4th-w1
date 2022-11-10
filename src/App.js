@@ -5,6 +5,7 @@ import HeroMarquee from "./components/HeroMarquee";
 import Hero2 from "./components/Hero2";
 import Banner from "./components/Banner";
 import Subjects from "./components/Subjects";
+import Schedule from "./components/Schedule";
 
 function App() {
   const mdScreen = 768;
@@ -16,6 +17,7 @@ function App() {
       <Hero2 />
       <Banner mdScreen={mdScreen} />
       <Subjects />
+      <Schedule />
     </div>
   );
 }

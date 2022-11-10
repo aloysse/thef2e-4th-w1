@@ -101,3 +101,11 @@ ul.effect-left li:hover:after {
   z-index: -2;
   @apply absolute left-[5px] top-[2px] whitespace-nowrap;
 }
+
+.schedule-card:hover {
+  @apply border-P1 bg-[#6E77E9]/10 drop-shadow-purple;
+}
+
+.schedule-card:hover h3 {
+  @apply text-P1 drop-shadow-purple;
+}
