@@ -6,6 +6,7 @@ import Hero2 from "./components/Hero2";
 import Banner from "./components/Banner";
 import Subjects from "./components/Subjects";
 import Schedule from "./components/Schedule";
+import Reward from "./components/Reward";
 
 function App() {
   const mdScreen = 768;
@@ -18,6 +19,7 @@ function App() {
       <Banner mdScreen={mdScreen} />
       <Subjects />
       <Schedule />
+      <Reward />
     </div>
   );
 }

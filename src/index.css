@@ -109,3 +109,18 @@ ul.effect-left li:hover:after {
 .schedule-card:hover h3 {
   @apply text-P1 drop-shadow-purple;
 }
+
+.reward-card {
+  background: linear-gradient(
+    100.38deg,
+    #313a65 3.95%,
+    rgba(49, 58, 101, 0) 100%
+  );
+}
+.reward-card:hover {
+  background: linear-gradient(
+    142.33deg,
+    rgba(157, 164, 255, 0.8) -0.03%,
+    rgba(85, 255, 173, 0.8) 99.97%
+  );
+}
