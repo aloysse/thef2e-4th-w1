@@ -9,15 +9,13 @@ import typeUI from "../assets/img/type-ui.svg";
 import BannerMarqueeImg from "../assets/img/property=tape-desktop.svg";
 import { gsap } from "gsap";
 
-const Banner = () => {
+const Banner = ({ mdScreen }) => {
   const bannerTl = gsap.timeline();
   const bannerTime = 2;
   const easeElastic2 = "elastic.out(1, 0.5)";
   const easeElastic = "elastic.out(1, 0.4)";
   useLayoutEffect(() => {
     const screenWidth = window.innerWidth;
-    console.log(screenWidth);
-    const md = 768;
     bannerTl
       .from("#bannerTitle", {
         scale: 0.1,
@@ -38,10 +36,10 @@ const Banner = () => {
       .from(
         "#rightHand",
         {
-          xPercent: screenWidth > md ? 150 : 0,
-          yPercent: screenWidth > md ? 0 : 150,
+          xPercent: screenWidth > mdScreen ? 150 : 0,
+          yPercent: screenWidth > mdScreen ? 0 : 150,
           opacity: 0,
-          rotate: screenWidth > md ? 50 : 315,
+          rotate: screenWidth > mdScreen ? 50 : 315,
           duration: bannerTime,
           ease: easeElastic,
         },
@@ -50,10 +48,10 @@ const Banner = () => {
       .from(
         "#leftHand",
         {
-          xPercent: screenWidth > md ? -150 : 0,
-          yPercent: screenWidth > md ? 0 : -150,
+          xPercent: screenWidth > mdScreen ? -150 : 0,
+          yPercent: screenWidth > mdScreen ? 0 : -150,
           opacity: 0,
-          rotate: screenWidth > md ? -50 : 45,
+          rotate: screenWidth > mdScreen ? -50 : 45,
           duration: bannerTime,
           ease: easeElastic,
         },
