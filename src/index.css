@@ -104,10 +104,12 @@ ul.effect-left li:hover:after {
 
 .schedule-card:hover {
   @apply border-P1 bg-[#6E77E9]/10 drop-shadow-purple;
+  transition: all 0.3s ease;
 }
 
 .schedule-card:hover h3 {
   @apply text-P1 drop-shadow-purple;
+  transition: all 0.3s ease;
 }
 
 .reward-card {
