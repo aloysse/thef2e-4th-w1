@@ -7,6 +7,7 @@ import Banner from "./components/Banner";
 import Subjects from "./components/Subjects";
 import Schedule from "./components/Schedule";
 import Reward from "./components/Reward";
+import QandA from "./components/QandA";
 
 function App() {
   const mdScreen = 768;
@@ -20,6 +21,7 @@ function App() {
       <Subjects />
       <Schedule />
       <Reward />
+      <QandA />
     </div>
   );
 }
