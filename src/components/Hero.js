@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import codeImg from "../assets/img/code.png";
 import webPageImg from "../assets/img/web_page.png";
 import pacman1 from "../assets/img/pacman-1.svg";
@@ -7,11 +7,30 @@ import SignUpButton from "./SignUpButton";
 import { gsap } from "gsap";
 
 const Hero = () => {
-  useLayoutEffect(() => {
+  const heroTl = gsap.timeline();
+  useEffect(() => {
     //動畫設定
-    gsap.from("#codeImg", 1, { y: 50, opacity: 0 });
-    gsap.from("#webPageImg", 1, { y: 50, opacity: 0 }, "<");
-    gsap.from("#title", 1, { y: 50, opacity: 0 }, "<");
+    heroTl
+      .from("#codeImg", 1, { y: 50, opacity: 0 })
+      .from("#webPageImg", 1, { y: 50, opacity: 0 }, "<")
+      .from("#title", 1, { y: 50, opacity: 0 }, "<")
+      .to("#codeImg", 1.5, {
+        y: 30,
+        yoyo: true,
+        repeat: -1,
+        ease: "power1.inOut",
+      })
+      .to(
+        "#webPageImg",
+        1.5,
+        {
+          y: -30,
+          yoyo: true,
+          repeat: -1,
+          ease: "power1.inOut",
+        },
+        "<"
+      );
   }, []);
 
   return (
