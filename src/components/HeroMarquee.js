@@ -4,7 +4,6 @@ import { gsap } from "gsap";
 
 const HeroMarquee = () => {
   useLayoutEffect(() => {
-    console.log("animate");
     gsap.to("#joinUs", 5, {
       backgroundPosition: "374px 0",
       ease: "none",
