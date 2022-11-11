@@ -3,6 +3,7 @@ import codeImg from "../assets/img/code.png";
 import webPageImg from "../assets/img/web_page.png";
 import pacman1 from "../assets/img/pacman-1.svg";
 import pacman2 from "../assets/img/pacman-2.svg";
+import SignUpButton from "./SignUpButton";
 import { gsap } from "gsap";
 
 const Hero = () => {
@@ -37,9 +38,7 @@ const Hero = () => {
           <h1 className="lg:text-[28px] text-[20px] tracking-[0.8em] lg:mb-[110px] md:mb-[67px] mb-[45px] font-bold">
             互動式網頁設計
           </h1>
-          <button className="text-N6 lg:text-[24px] text-[20px] lg:py-[20px] lg:px-[72px] py-[8px] px-[39px] bg-Y1 hover:bg-Y2 hover:drop-shadow-yellow rounded-full font-bold duration-75">
-            立即報名
-          </button>
+          <SignUpButton />
         </div>
         <div className="hidden md:block absolute left-[15%] top-[50%]">
           <img src={pacman2} alt="pacman" className="lg:w-[100%] w-[60%]" />
