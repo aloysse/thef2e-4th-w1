@@ -1,16 +1,31 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import flag from "../assets/img/finish_flag.svg";
 import car from "../assets/img/car.svg";
 import line from "../assets/img/line.svg";
 import paperBoardImg from "../assets/img/paper_board.png";
 import coinImg from "../assets/img/coin.png";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Reward = () => {
   let raceRef = useRef(null);
   const rewardTl = gsap.timeline();
-  useLayoutEffect(() => {
+
+  useEffect(() => {
+    // 取得賽道長度
     let raceLength = raceRef.current.offsetWidth;
+
+    ScrollTrigger.create({
+      trigger: "#title1",
+      markers: false,
+      onEnter: function () {
+        rewardAnimation(raceLength);
+      },
+    });
+  }, []);
+
+  function rewardAnimation(raceLength) {
     rewardTl
       .from("#title1", 1, { opacity: 0, yPercent: 100, ease: "power1.inOut" })
       .from("#race", 1, { opacity: 0, ease: "power1.inOut" }, "<")
@@ -23,7 +38,9 @@ const Reward = () => {
       .to("#title2", 1, { opacity: 1, delay: 0.5 })
       .to("#car", 0.6, { x: -raceLength + 140, ease: "none" })
       .to("#flag", 0.5, { rotate: -45, xPercent: -30, yPercent: -20 });
-  }, []);
+  }
+
+  // 卡片元件
   const RewardCard = ({ children, imgUrl, title }) => (
     <div className="reward-card p-[2px] rounded-card hover:translate-y-[-30px] ease-linear duration-200">
       <div className="bg-N3 rounded-card p-[40px] w-[485px] h-[552px] text-center">
