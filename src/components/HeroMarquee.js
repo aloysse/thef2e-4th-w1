@@ -1,9 +1,9 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import joinUsImg from "../assets/img/join_us.svg";
 import { gsap } from "gsap";
 
 const HeroMarquee = () => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     gsap.to("#joinUs", 5, {
       backgroundPosition: "374px 0",
       ease: "none",
