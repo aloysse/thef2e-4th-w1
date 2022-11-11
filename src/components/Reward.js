@@ -43,7 +43,7 @@ const Reward = () => {
   // 卡片元件
   const RewardCard = ({ children, imgUrl, title }) => (
     <div className="reward-card p-[2px] rounded-card hover:translate-y-[-30px] ease-linear duration-200">
-      <div className="bg-N3 rounded-card p-[40px] w-[485px] h-[552px] text-center">
+      <div className="bg-N3 rounded-card p-[40px] max-w-[485px] min-h-[552px] text-center">
         <img className="inline-block mb-[8px]" src={imgUrl} alt="" />
         <h3 className="text-P1 text-h2 font-bold mb-[46px]">{title}</h3>
         <div className="text-left text-h5">{children}</div>
@@ -52,21 +52,17 @@ const Reward = () => {
   );
 
   return (
-    <section className="text-N1 py-[100px]">
+    <section className="text-N1 py-[100px] px-[16px]">
       <h2
         id="title1"
-        className=" text-h2 font-bold text-center drop-shadow-white"
+        className=" lg:text-h2 text-h4 font-bold text-center drop-shadow-white"
       >
         <span>區區修煉已經無法滿足了嗎？</span>
         <span id="title2" className="opacity-0 xl:inline-block block">
           還有比賽等著你！
         </span>
       </h2>
-      <div
-        id="race"
-        className="xl:w-[856px] w-[485px] m-auto my-[60px]"
-        ref={raceRef}
-      >
+      <div id="race" className="max-w-[856px] m-auto my-[60px]" ref={raceRef}>
         <div className="flex justify-between items-baseline">
           <img id="flag" src={flag} alt="" />
           <img id="car" src={car} alt="" />
