@@ -57,7 +57,7 @@ const Subjects = () => {
 
   useEffect(() => {
     ScrollTrigger.create({
-      trigger: "#subjectsTitle",
+      trigger: "#subjectsText",
       markers: false,
       onEnter: function () {
         subjectsAnimation();
