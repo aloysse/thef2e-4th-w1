@@ -1,13 +1,17 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import lock from "../assets/img/lock-locked.png";
 import thunderImg from "../assets/img/thunder.svg";
-import { gsap } from "gsap";
 import webPage from "../assets/img/web_page.png";
 import rightIcon from "../assets/img/icon/rignt-icon.svg";
 import signBoard from "../assets/img/sign_board.png";
 import exchange from "../assets/img/exchange_perspective_matte.png";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Subjects = () => {
+  const subjectsTl = gsap.timeline();
+
   const cardContents = [
     {
       id: "week1",
@@ -35,9 +39,8 @@ const Subjects = () => {
     },
   ];
 
-  const subjectsTl = gsap.timeline();
-
-  useLayoutEffect(() => {
+  // 動畫時間軸
+  function subjectsAnimation() {
     subjectsTl
       .from("#subjectsTitle", 1, { yPercent: -50, opacity: 0 })
       .from("#subjectsText", 1, { yPercent: 100, opacity: 0 }, "<")
@@ -50,8 +53,19 @@ const Subjects = () => {
       .to("#week2Back", 0.5, { scaleX: 1, ease: "power2.out" })
       .to("#week3", 0.5, { scaleX: 0, ease: "power2.in" })
       .to("#week3Back", 0.5, { scaleX: 1, ease: "power2.out" });
+  }
+
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: "#subjectsTitle",
+      markers: false,
+      onEnter: function () {
+        subjectsAnimation();
+      },
+    });
   }, []);
 
+  // 主題卡片元件
   const SubjectCard = ({ id, week, title, h4, h5, imgUrl }) => {
     return (
       <div className="relative lg:mb-0 mb-[40px]">
@@ -79,8 +93,10 @@ const Subjects = () => {
           <img className="h-[165px] inline-block" src={imgUrl} alt="" />
           <div className="flex justify-between text-[14px] mt-[16px]">
             <p className="text-P2 font-Monument">{week}</p>
-            <div className="text-P3">
-              查看關卡細節
+            <div className=" ">
+              <p className="cursor-pointer text-P3 hover:border-b-2 hover:border-P3 inline-block">
+                查看關卡細節
+              </p>
               <img className="inline-block " src={rightIcon} alt="" />
             </div>
           </div>
@@ -93,7 +109,7 @@ const Subjects = () => {
     <section className="pt-[159px] pb-[100px]">
       <div className="max-w-[980px] m-auto text-center">
         <div id="subjectsTitle" className="relative inline-block">
-          <h2 className="border border-G1 drop-shadow-green border-4 py-[16px] px-[36px] drop-shadow-green rounded-full inline-block text-G1 font-bold text-[32px]">
+          <h2 className=" border-G1 drop-shadow-green border-4 py-[16px] px-[36px] rounded-full inline-block text-G1 font-bold text-[32px]">
             年度最強合作 三大主題來襲
           </h2>
           <img
