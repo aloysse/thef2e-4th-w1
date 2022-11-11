@@ -50,10 +50,10 @@ const Banner = ({ mdScreen }) => {
       .from(
         "#rightHand",
         {
-          xPercent: screenWidth > mdScreen ? 150 : 0,
-          yPercent: screenWidth > mdScreen ? 0 : 150,
+          xPercent: screenWidth >= mdScreen ? 150 : 0,
+          yPercent: screenWidth >= mdScreen ? 0 : 150,
           opacity: 0,
-          rotate: screenWidth > mdScreen ? 50 : 315,
+          rotate: screenWidth >= mdScreen ? 50 : 315,
           duration: bannerTime,
           ease: easeElastic,
         },
@@ -62,10 +62,10 @@ const Banner = ({ mdScreen }) => {
       .from(
         "#leftHand",
         {
-          xPercent: screenWidth > mdScreen ? -150 : 0,
-          yPercent: screenWidth > mdScreen ? 0 : -150,
+          xPercent: screenWidth >= mdScreen ? -150 : 0,
+          yPercent: screenWidth >= mdScreen ? 0 : -150,
           opacity: 0,
-          rotate: screenWidth > mdScreen ? -50 : 45,
+          rotate: screenWidth >= mdScreen ? -50 : 45,
           duration: bannerTime,
           ease: easeElastic,
         },
