@@ -126,3 +126,13 @@ ul.effect-left li:hover:after {
     rgba(85, 255, 173, 0.8) 99.97%
   );
 }
+
+.sponsor-logo {
+  border: 6px solid transparent;
+  @apply rounded-card;
+}
+
+.sponsor-logo:hover {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #9da4ff, #55ffad) border-box;
+}
