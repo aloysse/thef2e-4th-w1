@@ -43,7 +43,7 @@ const Reward = () => {
   // 卡片元件
   const RewardCard = ({ children, imgUrl, title }) => (
     <div className="reward-card p-[2px] rounded-card hover:translate-y-[-30px] ease-linear duration-200">
-      <div className="bg-N3 rounded-card p-[40px] max-w-[485px] min-h-[552px] text-center">
+      <div className="bg-N3 rounded-card p-[40px] sm:w-[485px] w-full min-h-[552px] text-center">
         <img className="inline-block mb-[8px]" src={imgUrl} alt="" />
         <h3 className="text-P1 text-h2 font-bold mb-[46px]">{title}</h3>
         <div className="text-left text-h5">{children}</div>
