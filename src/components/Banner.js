@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import gridBg from "../assets/img/grid_bg.svg";
 import bannerTitle from "../assets/img/banner-title.svg";
 import closeBlackIcon from "../assets/img/icon/close-black.svg";
@@ -8,14 +8,28 @@ import typeF2e from "../assets/img/type-front-end_developer.svg";
 import typeUI from "../assets/img/type-ui.svg";
 import BannerMarqueeImg from "../assets/img/property=tape-desktop.svg";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Banner = ({ mdScreen }) => {
   const bannerTl = gsap.timeline();
   const bannerTime = 2;
   const easeElastic2 = "elastic.out(1, 0.5)";
   const easeElastic = "elastic.out(1, 0.4)";
-  useLayoutEffect(() => {
-    const screenWidth = window.innerWidth;
+  const screenWidth = window.innerWidth;
+
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: "#bannerTitle",
+      markers: false,
+      onEnter: function () {
+        bannerAnimation();
+      },
+    });
+  }, []);
+
+  //動畫時間軸
+  function bannerAnimation() {
     bannerTl
       .from("#bannerTitle", {
         scale: 0.1,
@@ -95,7 +109,9 @@ const Banner = ({ mdScreen }) => {
         },
         "<"
       );
-  }, []);
+  }
+
+  // 跑馬燈元件
   const BannerMarquee = ({ id }) => (
     <div
       id={id}
@@ -103,6 +119,7 @@ const Banner = ({ mdScreen }) => {
       style={{ backgroundImage: `url(${BannerMarqueeImg})` }}
     ></div>
   );
+
   return (
     <section className="w-full" style={{ backgroundImage: `url(${gridBg})` }}>
       <BannerMarquee id="BannerMarqueeToRihgt" />
@@ -120,6 +137,7 @@ const Banner = ({ mdScreen }) => {
             src={bannerTitle}
             alt=""
           />
+          {/* mobile text */}
           <div
             id="bannerText"
             className="md:hidden text-[24px] flex whitespace-nowrap mt-[3%]"
@@ -135,6 +153,7 @@ const Banner = ({ mdScreen }) => {
             alt="left hand"
           />
         </div>
+        {/* desktop text */}
         <div
           id="bannerText"
           className="md:flex hidden lg:text-[32px] text-[18px] whitespace-nowrap mt-[3%]"
