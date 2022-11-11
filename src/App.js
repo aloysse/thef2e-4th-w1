@@ -9,6 +9,7 @@ import Schedule from "./components/Schedule";
 import Reward from "./components/Reward";
 import QandA from "./components/QandA";
 import Sponsors from "./components/Sponsors";
+import Footer from "./components/Footer";
 
 function App() {
   const mdScreen = 768;
@@ -24,6 +25,7 @@ function App() {
       <Reward />
       <QandA />
       <Sponsors />
+      <Footer />
     </div>
   );
 }
