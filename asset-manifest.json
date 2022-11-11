@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/thef2e-4th-w1/static/css/main.d681c456.css",
-    "main.js": "/thef2e-4th-w1/static/js/main.e4798f18.js",
+    "main.css": "/thef2e-4th-w1/static/css/main.8143872d.css",
+    "main.js": "/thef2e-4th-w1/static/js/main.dbf42f0f.js",
     "static/media/web_page.png": "/thef2e-4th-w1/static/media/web_page.8fcf40d0dd48d8a1d2d4.png",
     "static/media/MonumentExtended-Regular.otf": "/thef2e-4th-w1/static/media/MonumentExtended-Regular.db74f7a563ec017311bc.otf",
     "static/media/pilotcommand1_2ital.ttf": "/thef2e-4th-w1/static/media/pilotcommand1_2ital.788d7d7c80b6ae06ccbb.ttf",
@@ -44,11 +44,11 @@
     "static/media/close.svg": "/thef2e-4th-w1/static/media/close.b62aac77803d09a9e9a75d98478f5980.svg",
     "static/media/Property=triangle.svg": "/thef2e-4th-w1/static/media/Property=triangle.dc85fc63ccfaf77631a690d6084be382.svg",
     "static/media/rectangle70.svg": "/thef2e-4th-w1/static/media/rectangle70.ce1bc1021a5c41697b79783cba3c6494.svg",
-    "main.d681c456.css.map": "/thef2e-4th-w1/static/css/main.d681c456.css.map",
-    "main.e4798f18.js.map": "/thef2e-4th-w1/static/js/main.e4798f18.js.map"
+    "main.8143872d.css.map": "/thef2e-4th-w1/static/css/main.8143872d.css.map",
+    "main.dbf42f0f.js.map": "/thef2e-4th-w1/static/js/main.dbf42f0f.js.map"
   },
   "entrypoints": [
-    "static/css/main.d681c456.css",
-    "static/js/main.e4798f18.js"
+    "static/css/main.8143872d.css",
+    "static/js/main.dbf42f0f.js"
   ]
 }
