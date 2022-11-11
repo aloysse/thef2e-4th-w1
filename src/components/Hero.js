@@ -64,12 +64,12 @@ const Hero = () => {
         </div>
         <div
           id="webPageImg"
-          className="md:absolute self-end lg:right-[10%] md:right-[2%] bottom-[-40px]"
+          className="md:absolute self-end xl:right-[10%] md:right-[4%] bottom-[-30%] text-right"
         >
           <img
             src={webPageImg}
             alt="web page"
-            className="lg:w-[100%] md:w-[60%] w-[80%]"
+            className="xl:w-[100%] lg:w-[80%] w-[60%] inline-block"
           />
         </div>
         <div className="hidden md:block absolute right-0 top-[20px]">

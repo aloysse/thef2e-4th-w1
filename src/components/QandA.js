@@ -6,7 +6,7 @@ const QandA = () => {
   const [QaSort, setQaSort] = useState("common");
 
   const QaContent = ({ number, question, answer }) => (
-    <div className="flex  mb-[80px]">
+    <div className="flex lg:mb-[80px] mb-[56px] lg:flex-row flex-col">
       <h3 className=" font-Monument text-h3 text-P3 mr-[24px]">{number}</h3>
       <div>
         <h3 className="font-bold text-h4 mb-[16px]">{question}</h3>
@@ -16,7 +16,7 @@ const QandA = () => {
   );
 
   const QacontentContainer = ({ sort }) => (
-    <div className="p-[80px] bg-N1 max-w-[880px] m-auto rounded-card text-N5">
+    <div className="lg:p-[80px] p-[32px] bg-N1 max-w-[880px] m-auto rounded-card text-N5">
       {sort.map((item, index) => (
         <QaContent
           key={index}
@@ -40,11 +40,11 @@ const QandA = () => {
   );
 
   return (
-    <section className="py-[100px] px-[16px]">
-      <h2 className="text-h1 text-center text-N1 font-Monument mb-[60px]">
+    <section className="py-[100px] px-[20px]">
+      <h2 className="text-h1 text-center text-N1 font-Monument lg:mb-[60px] mb-[32px]">
         Q&A
       </h2>
-      <ul className="text-N2 flex effect-bottom space-x-[32px] text-h5 justify-center overflow-x-scroll mb-[40px]">
+      <ul className="text-N2 flex effect-bottom w-full text-h5 md:justify-center justify-start space-x-[32px] overflow-x-auto mb-[40px]">
         <QaList content={"常見問題"} qaSort={"common"} />
         <QaList content={"UI 設計師常見問題"} qaSort={"ui"} />
         <QaList content={"前端工程師常見問題"} qaSort={"frontEnd"} />

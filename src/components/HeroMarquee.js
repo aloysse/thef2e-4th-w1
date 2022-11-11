@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 const HeroMarquee = () => {
   useEffect(() => {
     gsap.to("#joinUs", 5, {
-      backgroundPosition: "374px 0",
+      backgroundPosition: "300px 0",
       ease: "none",
       repeat: -1,
     });
@@ -15,7 +15,7 @@ const HeroMarquee = () => {
     <div>
       <div
         id="joinUs"
-        className="bg-[length:374px_58px] bg-repeat-x h-[58px] w-full text-[48px] font-Monument hero-marquee text-transparent"
+        className="lg:bg-[length:300px_46px] bg-[length:150px_23px] bg-repeat-x lg:h-[46px] h-[23px] w-full text-[48px] font-Monument hero-marquee text-transparent"
         style={{ backgroundImage: `url(${joinUsImg})` }}
       ></div>
     </div>

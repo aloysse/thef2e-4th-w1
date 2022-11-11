@@ -47,7 +47,7 @@ const Schedule = () => {
   // 卡片元件
   const ScheduleCard = ({ children, title, imgUrl, dir }) => (
     <div
-      className={`flex ${dir} schedule-card justify-between items-center w-[520px] h-[300px] text-N1 border border-[3px] rounded-card border-N1 py-[54px] px-[40px]`}
+      className={`flex ${dir} schedule-card md:flex-row flex-col md:text-left text-center justify-between items-center md:w-[520px] md:h-[300px] text-N1 border border-[3px] rounded-card border-N1 py-[54px] px-[40px]`}
     >
       <img src={imgUrl} alt="" />
       <div className="w-[260px]">
@@ -61,10 +61,12 @@ const Schedule = () => {
     <section className="bg-N4 py-[80px]">
       <div
         id="scheduleTitle"
-        className="flex justify-center py-[16px] mb-[80px]"
+        className="flex justify-center py-[16px] mb-[80px] items-center"
       >
         <img src={titlePac1} alt="" />
-        <h2 className="mx-[36px] text-h1 text-N1 font-bold">活動說明</h2>
+        <h2 className="md:mx-[36px] mx-[16px] md:text-h1 text-h3 text-N1 font-bold">
+          活動說明
+        </h2>
         <img src={titlePac2} alt="" />
       </div>
       <div id="scheduleCards" className="flex flex-col items-center">
@@ -82,7 +84,7 @@ const Schedule = () => {
             <p>截止前可修改報名組別</p>
           </ScheduleCard>
 
-          <div className="xl:rotate-[270deg] m-[62px]">
+          <div className="xl:rotate-[270deg] md:m-[30px] m-0">
             <img src={carotDown} alt="" />
           </div>
 
@@ -102,7 +104,7 @@ const Schedule = () => {
         </div>
 
         <div className="flex">
-          <div className="m-[62px] xl:translate-x-[360px]">
+          <div className="md:m-[30px] m-0 xl:translate-x-[330px]">
             <img src={carotDown} alt="" />
           </div>
         </div>
@@ -121,7 +123,7 @@ const Schedule = () => {
             <p>依賽程登錄作品</p>
           </ScheduleCard>
 
-          <div className="xl:rotate-90 m-[62px]">
+          <div className="xl:rotate-90 md:m-[30px] m-0">
             <img src={carotDown} alt="" />
           </div>
 

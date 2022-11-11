@@ -106,19 +106,19 @@ const Subjects = () => {
   };
 
   return (
-    <section className="pt-[159px] pb-[100px]">
+    <section className="pt-[159px] pb-[100px] px-[35px]">
       <div className="max-w-[980px] m-auto text-center">
         <div id="subjectsTitle" className="relative inline-block">
           <h2 className=" border-G1 drop-shadow-green border-4 py-[16px] px-[36px] rounded-full inline-block text-G1 font-bold text-[32px]">
             年度最強合作 三大主題來襲
           </h2>
           <img
-            className="absolute top-[-100%] right-[-15%]"
+            className="absolute top-[-70%] right-[-10%]"
             src={thunderImg}
             alt=""
           />
         </div>
-        <p id="subjectsText" className="text-N1 m-[60px] text-[24px]">
+        <p id="subjectsText" className="text-N1 my-[60px] text-[24px]">
           各路廠商強強聯手
           <br />
           共同設計出接地氣的網頁互動跳戰關卡
