@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import pop1 from "../assets/img/pop1.svg";
 import pop2 from "../assets/img/pop2.svg";
@@ -11,12 +11,25 @@ import rectangle28 from "../assets/img/Property=Rectangle28.svg";
 import eyesMark from "../assets/img/Property=@@.svg";
 import union from "../assets/img/Property=Union.svg";
 import exMark from "../assets/img/Property=exMark.svg";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero2 = () => {
-  const popUpTimeline = gsap.timeline();
-  const popUp = { scale: 0.1, ease: "elastic.out(1,0.4)", duration: 0.8 };
-  useLayoutEffect(() => {
-    popUpTimeline
+  const popUpTl = gsap.timeline();
+  const popUp = { scale: 0, ease: "elastic.out(1,0.4)", duration: 0.8 };
+
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: "#pop2",
+      markers: false,
+      onEnter: function () {
+        hero2Animation();
+      },
+    });
+  }, []);
+
+  function hero2Animation() {
+    popUpTl
       .from("#rectangle26", popUp)
       .from("#star3", popUp, "<")
       .from("#pop1", popUp, "<")
@@ -28,7 +41,8 @@ const Hero2 = () => {
       .from("#triangle", popUp, "<")
       .from("#pop3", popUp, "<")
       .from("#eyesMark", popUp, "<");
-  }, []);
+  }
+
   return (
     <section className="w-full lg:text-[10px] text-[5.2px] lg:py-[120px] py-[60px]">
       <div className="m-auto lg:w-[912px] md:w-[500px] w-[400px] flex flex-col">
