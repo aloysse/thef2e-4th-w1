@@ -8,10 +8,24 @@ import folder from "../assets/img/I3D/FOLDER.png";
 import play from "../assets/img/I3D/PLAY.png";
 import carotDown from "../assets/img/carot-down.svg";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Schedule = () => {
   const scheduleTl = gsap.timeline();
+
   useLayoutEffect(() => {
+    ScrollTrigger.create({
+      trigger: "#scheduleCards",
+      markers: false,
+      onEnter: function () {
+        scheduleAnimation();
+      },
+    });
+  }, []);
+
+  // 動畫時間軸
+  function scheduleAnimation() {
     scheduleTl
       .from("#scheduleCards", 1, {
         y: 200,
@@ -28,8 +42,9 @@ const Schedule = () => {
         },
         "<"
       );
-  }, []);
+  }
 
+  // 卡片元件
   const ScheduleCard = ({ children, title, imgUrl, dir }) => (
     <div
       className={`flex ${dir} schedule-card justify-between items-center w-[520px] h-[300px] text-N1 border border-[3px] rounded-card border-N1 py-[54px] px-[40px]`}
